@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+$main-bgcolor:linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+$breakpoint-sm: 40em;
+$breakpoint-md: 48em;
+$breakpoint-lg: 64em;
+$breakpoint-xl: 80em;
+$breakpoint-2xl: 96em;
+
+:root{
+  font-family: "Kanit", sans-serif;
+}
+body{
+
+}
+a, button{
+  cursor: pointer;
+}
+header{
+  background: $main-bgcolor;
+  height: 100vh;
+  width: 18rem;
+  position: relative;
+  display: none;
+  @media  (min-width: $breakpoint-md) {
+    display: block;
+  }
+  .menulogo_bx{
+    img{
+      width: 200px;
+      padding: 25px;
+    }
+
+  }
+  nav{
+   ul{
+    li{
+      color: #fff;
+      a{
+        padding: .5em 1em;
+        display: block;
+        svg{
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+   }
+  }
+  .head-bottom{
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    a{
+      border: 1px solid #fff;
+      border-radius: 50%;
+      padding: .3em;
+      svg{
+        width: 19px;
+        height: 19px;
+        stroke: #fff;
+      }
+    }
+  }
+}
